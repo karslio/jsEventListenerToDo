@@ -13,6 +13,7 @@ function eventListeners(){ // tüm event listener
     document.addEventListener("DOMContentLoaded",loadAllTodosToUI)
     secondCardBody.addEventListener("click",deleteTodo);
     filter.addEventListener("keyup",filterTodos);
+    clearButton.addEventListener("click", clearAllTodos);
 }
 
 function addTodo(e){
@@ -137,7 +138,17 @@ function filterTodos(e){
 
 }
 
+function clearAllTodos(){
+    if(confirm("Tümünü silmek istediğinizden eminmisiniz ?")){
+        //arayuzden todo ları silme
+       // todoList.innerHTML = "" // yavas
+        while(todoList.firstElementChild != null){
+            todoList.removeChild(todoList.firstElementChild);
+        }
+    }
+}
 
+console.log("merhaba");
 
 
 // git add README.md
