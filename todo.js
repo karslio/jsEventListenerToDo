@@ -98,6 +98,11 @@ function loadAllTodosToUI(){
     })
 }
 
+
+const deneme =()=>{
+    
+}
+
 function deleteTodo(e){
     if (e.target.className === "fa fa-remove"){   
         e.target.parentElement.parentElement.remove();
