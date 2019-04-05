@@ -98,11 +98,6 @@ function loadAllTodosToUI(){
     })
 }
 
-
-const deneme =()=>{
-    
-}
-
 function deleteTodo(e){
     if (e.target.className === "fa fa-remove"){   
         e.target.parentElement.parentElement.remove();
@@ -124,10 +119,28 @@ function deleteTodofromStorage(deletetodo){
 }
 
 function filterTodos(e){
-    console.log(e.target.value);
+    const filterValue = e.target.value.toLowerCase();
+    const listItem = document.querySelectorAll(".list-group-item");
+
+    listItem.forEach(function(listItem){
+        const text = listItem.textContent.toLowerCase();
+        if (text.indexOf(filterValue) === -1){
+            //bulamadı
+            listItem.setAttribute("style", "display : none !important");
+        }
+        else{
+            listItem.setAttribute("style","display : block");
+        }
+
+
+    })
 
 }
 
 
 
 
+// git add README.md
+// git commit -m "first commit"
+// git remote add origin https://github.com/karslio/listeleme-.git
+// git push -u origin master
