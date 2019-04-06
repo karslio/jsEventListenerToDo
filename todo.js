@@ -132,8 +132,6 @@ function filterTodos(e){
         else{
             listItem.setAttribute("style","display : block");
         }
-
-
     })
 
 }
@@ -145,7 +143,7 @@ function clearAllTodos(){
         while(todoList.firstElementChild != null){
             todoList.removeChild(todoList.firstElementChild);
         }
-    }
+    
 }
 
 console.log("merhaba");
@@ -154,4 +152,4 @@ console.log("merhaba");
 // git add README.md
 // git commit -m "first commit"
 // git remote add origin https://github.com/karslio/listeleme-.git
-// git push -u origin master
+// git push -u origin master */
